@@ -10,7 +10,7 @@
 - `cd <directory>`              # Change to a specified directory
 - `cd ..`                       # Move one directory up
 - `cd /`                        # Go to the root directory
-- `cd ~`                        # Go to the home directory
+- `cd ~`                        # Go to the home directory (demo)
 
 ---
 
