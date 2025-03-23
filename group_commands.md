@@ -1,7 +1,11 @@
+```bash
 # Group Management Commands
 
 # Create a new group
 sudo groupadd <group-name>
+
+---
+```bash
 
 # Delete a group
 sudo groupdel <group-name>
