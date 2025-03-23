@@ -1,66 +1,37 @@
-# Add a new user
-sudo useradd <username>
+# User Management Commands
 
-# Set a password for the user
-sudo passwd <username>
+## Creating and Deleting Users
+- `sudo useradd <username>`                   # Add a new user
+- `sudo passwd <username>`                    # Set a password for the user
+- `sudo userdel <username>`                   # Delete a user
+- `sudo userdel -r <username>`                # Remove a user and their home directory
+- `sudo useradd -m -s /bin/bash <username>`   # Create a new user with a specified home directory and shell
 
-# Delete a user
-sudo userdel <username>
+---
 
-# Remove a user and their home directory
-sudo userdel -r <username>
+## Modifying Users
+- `sudo usermod -d /home/new_home <username>`  # Modify a user (e.g., change home directory)
+- `sudo usermod -aG <group-name> <username>`   # Add a user to a group
+- `sudo usermod -L <username>`                # Lock a user account
+- `sudo usermod -U <username>`                # Unlock a user account
 
-# Modify a user (e.g., change home directory)
-sudo usermod -d /home/new_home <username>
+---
 
-# Add a user to a group
-sudo usermod -aG <group-name> <username>
+## Viewing User Information
+- `cat /etc/passwd`                           # List all users on the system
+- `id <username>`                             # Display current user details (UID, GID, groups)
+- `groups <username>`                         # Display all groups a user is a member of
+- `who`                                       # Show currently logged-in users
+- `w`                                         # Display information about currently logged-in users
+- `last`                                      # Check last login information of users
+- `getent passwd`                             # Display all user accounts
+- `lastlog`                                   # Show users' login records
 
-# Remove a user from a group
-sudo gpasswd -d <username> <group-name>
+---
 
-# Lock a user account
-sudo usermod -L <username>
-
-# Unlock a user account
-sudo usermod -U <username>
-
-# List all users on the system
-cat /etc/passwd
-
-# Display current user details (UID, GID, groups)
-id <username>
-
-# Display all groups a user is a member of
-groups <username>
-
-# Show currently logged-in users
-who
-
-# Display information about currently logged-in users
-w
-
-# Check last login information of users
-last
-
-# Change user password expiration date
-sudo chage -E YYYY-MM-DD <username>  # Set account expiration date
-
-# Set password expiry information
-sudo chage -M 30 <username>  # Maximum days before password change required
-
-# Disable user password expiry
-sudo chage -M -1 <username>  # Disable password expiry
-
-# Display password expiration information
-sudo chage -l <username>
-
-# Display all user accounts
-getent passwd
-
-# Create a new user with a specified home directory and shell
-sudo useradd -m -s /bin/bash <username>
-
-# Show users' login records
-lastlog
+## Password Expiry Management
+- `sudo chage -E YYYY-MM-DD <username>`       # Change user password expiration date
+- `sudo chage -M 30 <username>`               # Set maximum days before password change required
+- `sudo chage -M -1 <username>`               # Disable password expiry
+- `sudo chage -l <username>`                  # Display password expiration information
 
