@@ -1,0 +1,38 @@
+# Group Management Commands
+
+# Create a new group
+sudo groupadd <group-name>
+
+# Delete a group
+sudo groupdel <group-name>
+
+# Modify an existing group (e.g., change group name)
+sudo groupmod -n <new-group-name> <old-group-name>
+
+# Add a user to a group
+sudo usermod -aG <group-name> <username>
+
+# Remove a user from a group
+sudo gpasswd -d <username> <group-name>
+
+# List all groups on the system
+cat /etc/group
+
+# Display the groups a user belongs to
+groups <username>
+
+# Show the members of a group
+getent group <group-name>
+
+# Change the group name of an existing group
+sudo groupmod -n <new-group-name> <group-name>
+
+# Change the group ID (GID) of an existing group
+sudo groupmod -g <new-gid> <group-name>
+
+# Display the GID of a group
+getent group <group-name>
+
+# List all groups a user is part of
+id <username>
+
