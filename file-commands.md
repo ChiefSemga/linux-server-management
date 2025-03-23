@@ -8,7 +8,7 @@ ls -lh                      # List files with human-readable sizes
 ---
 
 ## Changing Directories
-```bash
+
 cd <directory>              # Change to a specified directory
 cd ..                       # Move one directory up
 cd /                        # Go to the root directory
@@ -17,7 +17,7 @@ cd ~                        # Go to the home directory
 ---
 
 ## Creating files and directories 
-```bash
+
 touch <file>                # Create an empty file
 mkdir <directory>           # Create a new directory
 
