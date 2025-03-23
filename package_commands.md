@@ -1,127 +1,64 @@
-# apt_commands for Ubuntu/Debian
+# Package Management Commands
 
-# Update package list
-sudo apt update
+## **apt_commands** for Ubuntu/Debian
 
-# Upgrade all packages
-sudo apt upgrade
+### Managing Packages
+- `sudo apt update`                          # Update package list
+- `sudo apt upgrade`                         # Upgrade all packages
+- `sudo apt install <package-name>`          # Install a package
+- `sudo apt remove <package-name>`           # Remove a package
+- `sudo apt autoremove`                      # Remove unused packages and dependencies
+- `apt search <package-name>`                # Search for a package
+- `apt show <package-name>`                  # Show package details
+- `dpkg -l`                                  # List installed packages
+- `apt list --upgradable`                    # List upgradable packages
+- `sudo apt clean`                           # Clean up downloaded package files
+- `sudo apt dist-upgrade`                    # Upgrade the system
 
-# Install a package
-sudo apt install <package-name>
+---
 
-# Remove a package
-sudo apt remove <package-name>
+## **yum_commands** for CentOS/RHEL 7 and earlier
 
-# Remove a package and its dependencies
-sudo apt autoremove
+### Managing Packages
+- `sudo yum update`                         # Update all packages
+- `sudo yum install <package-name>`         # Install a package
+- `sudo yum remove <package-name>`          # Remove a package
+- `yum search <package-name>`               # Search for a package
+- `yum list installed`                      # List installed packages
+- `yum check-update`                        # List available updates
+- `yum info <package-name>`                 # Show package details
+- `sudo yum clean all`                      # Clean up cached package data
+- `sudo yum install <package-name>-<version>` # Install a specific version of a package
 
-# Search for a package
-apt search <package-name>
+---
 
-# Show package details
-apt show <package-name>
+## **dnf_commands** for CentOS/RHEL 8 and Fedora
 
-# List installed packages
-dpkg -l
+### Managing Packages
+- `sudo dnf update`                         # Update all packages
+- `sudo dnf install <package-name>`         # Install a package
+- `sudo dnf remove <package-name>`          # Remove a package
+- `dnf search <package-name>`               # Search for a package
+- `dnf list installed`                      # List installed packages
+- `dnf check-update`                        # List available updates
+- `dnf info <package-name>`                 # Show package details
+- `sudo dnf clean all`                      # Clean up cached package data
+- `sudo dnf install <package-name>-<version>` # Install a specific version of a package
+- `dnf repolist enabled`                    # List enabled repositories
 
-# List upgradable packages
-apt list --upgradable
+---
 
-# Clean up downloaded package files
-sudo apt clean
+## **zypper_commands** for openSUSE
 
-# Upgrade the system
-sudo apt dist-upgrade
-
-# Yum_commands for CentOS/RHEL 7 and earlier
-# Update all packages
-sudo yum update
-
-# Install a package
-sudo yum install <package-name>
-
-# Remove a package
-sudo yum remove <package-name>
-
-# Search for a package
-yum search <package-name>
-
-# List installed packages
-yum list installed
-
-# List available updates
-yum check-update
-
-# Show package details
-yum info <package-name>
-
-# Clean up cached package data
-sudo yum clean all
-
-# Install a specific version of a package
-sudo yum install <package-name>-<version>
-
-# dnf_commands for CentOS/RHEL 8 and Fedora
-# Update all packages
-sudo dnf update
-
-# Install a package
-sudo dnf install <package-name>
-
-# Remove a package
-sudo dnf remove <package-name>
-
-# Search for a package
-dnf search <package-name>
-
-# List installed packages
-dnf list installed
-
-# List available updates
-dnf check-update
-
-# Show package details
-dnf info <package-name>
-
-# Clean up cached package data
-sudo dnf clean all
-
-# Install a specific version of a package
-sudo dnf install <package-name>-<version>
-
-# List enabled repositories
-dnf repolist enabled
-
-# zypper_commands for openSUSE
-# Update all packages
-sudo zypper update
-
-# Install a package
-sudo zypper install <package-name>
-
-# Remove a package
-sudo zypper remove <package-name>
-
-# Search for a package
-zypper search <package-name>
-
-# List installed packages
-zypper search --installed-only
-
-# Show package details
-zypper info <package-name>
-
-# Refresh repositories
-sudo zypper refresh
-
-# Clean up package cache
-sudo zypper clean
-
-# Install a specific version of a package
-sudo zypper install <package-name>-<version>
-
-# List all repositories
-zypper repos
-
-
+### Managing Packages
+- `sudo zypper update`                      # Update all packages
+- `sudo zypper install <package-name>`      # Install a package
+- `sudo zypper remove <package-name>`       # Remove a package
+- `zypper search <package-name>`            # Search for a package
+- `zypper search --installed-only`          # List installed packages
+- `zypper info <package-name>`              # Show package details
+- `sudo zypper refresh`                     # Refresh repositories
+- `sudo zypper clean`                       # Clean up package cache
+- `sudo zypper install <package-name>-<version>` # Install a specific version of a package
+- `zypper repos`                             # List all repositories
 
