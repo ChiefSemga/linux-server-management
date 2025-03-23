@@ -1,42 +1,31 @@
-```bash
 # Group Management Commands
 
-# Create a new group
-sudo groupadd <group-name>
+## Create a New Group
+- `sudo groupadd <group-name>`         # Create a new group
 
 ---
-```bash
 
-# Delete a group
-sudo groupdel <group-name>
+## Delete a Group
+- `sudo groupdel <group-name>`         # Delete a group
 
-# Modify an existing group (e.g., change group name)
-sudo groupmod -n <new-group-name> <old-group-name>
+---
 
-# Add a user to a group
-sudo usermod -aG <group-name> <username>
+## Modify an Existing Group
+- `sudo groupmod -n <new-group-name> <old-group-name>`  # Change group name
+- `sudo groupmod -g <new-gid> <group-name>`             # Change the group ID (GID)
 
-# Remove a user from a group
-sudo gpasswd -d <username> <group-name>
+---
 
-# List all groups on the system
-cat /etc/group
+## User Group Management
+- `sudo usermod -aG <group-name> <username>`  # Add a user to a group
+- `sudo gpasswd -d <username> <group-name>`   # Remove a user from a group
 
-# Display the groups a user belongs to
-groups <username>
+---
 
-# Show the members of a group
-getent group <group-name>
-
-# Change the group name of an existing group
-sudo groupmod -n <new-group-name> <group-name>
-
-# Change the group ID (GID) of an existing group
-sudo groupmod -g <new-gid> <group-name>
-
-# Display the GID of a group
-getent group <group-name>
-
-# List all groups a user is part of
-id <username>
+## Viewing Group Information
+- `cat /etc/group`                 # List all groups on the system
+- `groups <username>`              # Display the groups a user belongs to
+- `getent group <group-name>`      # Show the members of a group
+- `getent group <group-name>`      # Display the GID of a group
+- `id <username>`                  # List all groups a user is part of
 
